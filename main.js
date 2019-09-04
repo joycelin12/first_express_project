@@ -7,6 +7,10 @@ const port = 3000,
 app.get("/", (req, res) => { // set up a get rote for home page
 
    res.send("Hello, Universe!"); //issue response from server with re.send
+   console.log(req.params); //access request parameters
+   console.log(req.body);
+   console.log(req.url);
+   console.log(req.query);	
 })
  .listen(port, () => { //
    console.log(`The Express.js server has started and is listening on port number: ${port}`);
